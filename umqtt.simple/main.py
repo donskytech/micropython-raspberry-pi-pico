@@ -13,7 +13,7 @@ PUBLISH_TOPIC = b"temperature"
 # Setup built in PICO LED as Output
 led = machine.Pin("LED",machine.Pin.OUT)
 
-# Ping the MQTT broker since we are not publishing any message
+# Publish MQTT messages after every set timeout
 last_publish = time.time()
 publish_interval = 5
 
