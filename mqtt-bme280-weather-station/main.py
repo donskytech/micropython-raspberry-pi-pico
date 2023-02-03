@@ -41,6 +41,7 @@ def reset():
 def get_temperature_reading():
     return bme_module.get_sensor_readings()
     
+# Main program
 def main():
     print(f"Begin connection with MQTT Broker :: {MQTT_BROKER}")
     mqttClient = MQTTClient(CLIENT_ID, MQTT_BROKER, keepalive=60)
