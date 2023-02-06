@@ -15,7 +15,7 @@ pwms = [PWM(Pin(pwm_pins[RED])),PWM(Pin(pwm_pins[GREEN])),
 [pwm.freq(1000) for pwm in pwms]
 
 # Colors that we are going to display
-colors = {"pink": (255, 0, 255), "yellow": (255,255,0), "skyblue": (0, 255, 255)
+colors = {"fuschia": (255, 0, 255), "yellow": (255,255,0), "aqua": (0, 255, 255)
           , "orange": (230, 138 , 0), "white": (255, 255 , 255)}
 
 def map_range(x, in_min, in_max, out_min, out_max):
