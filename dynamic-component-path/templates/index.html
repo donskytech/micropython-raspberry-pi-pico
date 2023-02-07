@@ -1,0 +1,19 @@
+{% args colors %}
+<!doctype html>
+<html>
+   <head>
+      <title>Microdot Dynamic Component in Path</title>
+   </head>
+   <body>
+      <h1>Which LED?</h1>
+      <section>
+         {% for color in colors %}
+         <div>
+            <input type="radio" name="led" id="{{color['name']}}" value="{{color['name']}}" onclick="toggleLED(this.value)">
+            <label for="red">{{color['name']}}</label>
+         </div>
+         {% endfor %}
+      </section>
+      <script src="static/index.js"></script>
+   </body>
+</html>
