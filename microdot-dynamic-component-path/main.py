@@ -44,4 +44,8 @@ def shutdown(request):
     return 'The server is shutting down...'
 
 
-app.run()
+if __name__ == "__main__":
+    try:
+        app.run()
+    except KeyboardInterrupt:
+        rgb_led_module.deinit_pwms()
