@@ -17,7 +17,7 @@ async def index(request):
     return render_template('index.html')
 
 
-@app.route('/sensorReadings')
+@app.route('/ws')
 @with_websocket
 async def read_sensor(request, ws):
     while True:
