@@ -9,8 +9,8 @@ var sensorChartDiv = document.getElementById("sensor-chart");
 
 // History Data
 var sensorTrace = {
-  x: [1, 2, 3, 4, 5],
-  y: [26, 29, 31, 32, 35],
+  x: [],
+  y: [],
   name: "LDR/Photoresistor",
   mode: "lines+markers",
   type: "line",
@@ -62,7 +62,7 @@ function updateChart(sensorRead) {
 }
 
 // WebSocket support
-var targetUrl = `ws://${location.host}/sensorReadings`;
+var targetUrl = `ws://${location.host}/ws`;
 var websocket;
 window.addEventListener("load", onLoad);
 
@@ -79,7 +79,6 @@ function initializeSocket() {
 }
 function onOpen(event) {
   console.log("Starting connection to WebSocket server..");
-  sendMessage("Open");
 }
 function onClose(event) {
   console.log("Closing connection to server..");
