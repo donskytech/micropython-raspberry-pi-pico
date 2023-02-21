@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MicroPython WebSocket</title>
+    <link rel="stylesheet" href="static/index.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+  </head>
+  <body>
+    <h1>MicroPython WebSocket</h1>
+    <div class="container">
+      <aside>
+        <h2>Real time values</h2>
+        <textarea
+          id="sensor-values"
+          name=""
+          class="values"
+          cols="10"
+          rows="20"
+        ></textarea>
+      </aside>
+      <main class="chart">
+        <h2>LDR/Photoresistor</h2>
+        <div class="wrapper">
+          <div id="sensor-chart" class="sensor-chart"></div>
+        </div>
+      </main>
+    </div>
+    <script src="static/index.js"></script>
+  </body>
+</html>
