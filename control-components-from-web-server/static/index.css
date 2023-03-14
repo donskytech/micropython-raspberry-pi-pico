@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+main {
+  padding: 2rem;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.slidecontainer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 60%;
+  margin-top: 2rem;
+}
+.color-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
