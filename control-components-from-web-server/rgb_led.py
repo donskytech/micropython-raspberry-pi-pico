@@ -28,7 +28,7 @@ class RGBLEDModule:
         for pwm in self.pwms:
             pwm.deinit()
     
-    # Map RGB values from 0-255 to duty cycle 0-65535
+    # Map RGB values from 0-100 to duty cycle 0-65535
     def map_range(self, x, in_min, in_max, out_min, out_max):
       return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
 
