@@ -14,7 +14,7 @@ robot_car = RobotCar(motor_pins, 20000)
 
 if __name__ == '__main__':
     try:
-        # Test forward, reverse and stop
+        # Test forward, reverse, stop, turn left and turn right
         print("Testing forward, reverse and loop")
         for i in range(2):
             print("Moving forward")
@@ -26,28 +26,34 @@ if __name__ == '__main__':
             print("stop")
             robot_car.stop()
             utime.sleep(2)
-            
-        print("Testing speed")
-        for i in range(2):
-            print("Moving at 100% speed")
-            robot_car.change_speed(100);
-            robot_car.move_forward()
+            print("turn left")
+            robot_car.turn_left()
+            utime.sleep(2)
+            print("turn right")
+            robot_car.turn_right()
             utime.sleep(2)
             
-            print("Moving at 50% speed")
-            robot_car.change_speed(50);
-            robot_car.move_forward()
-            utime.sleep(2)
-            
-            print("Moving at 20% of speed")
-            robot_car.change_speed(20);
-            robot_car.move_forward()
-            utime.sleep(2)
-            
-            print("Moving at 0% of speed or the slowest")
-            robot_car.change_speed(0);
-            robot_car.move_forward()
-            utime.sleep(2)
+#         print("Testing speed")
+#         for i in range(2):
+#             print("Moving at 100% speed")
+#             robot_car.change_speed(100);
+#             robot_car.move_forward()
+#             utime.sleep(2)
+#             
+#             print("Moving at 50% speed")
+#             robot_car.change_speed(50);
+#             robot_car.move_forward()
+#             utime.sleep(2)
+#             
+#             print("Moving at 20% of speed")
+#             robot_car.change_speed(20);
+#             robot_car.move_forward()
+#             utime.sleep(2)
+#             
+#             print("Moving at 0% of speed or the slowest")
+#             robot_car.change_speed(0);
+#             robot_car.move_forward()
+#             utime.sleep(2)
             
         robot_car.deinit()
 

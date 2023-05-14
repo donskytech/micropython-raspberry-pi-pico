@@ -36,6 +36,20 @@ class RobotCar:
         self.right_motor_pin1.duty_u16(RobotCar.MIN_DUTY_CYCLE)
         self.right_motor_pin2.duty_u16(self.current_speed)
         
+    def turn_left(self):
+        self.left_motor_pin1.duty_u16(self.current_speed)
+        self.left_motor_pin2.duty_u16(RobotCar.MIN_DUTY_CYCLE)
+        
+        self.right_motor_pin1.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        self.right_motor_pin2.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        
+    def turn_right(self):
+        self.left_motor_pin1.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        self.left_motor_pin2.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        
+        self.right_motor_pin1.duty_u16(self.current_speed)
+        self.right_motor_pin2.duty_u16(RobotCar.MIN_DUTY_CYCLE)
+        
     def stop(self):
         self.left_motor_pin1.duty_u16(RobotCar.MAX_DUTY_CYCLE)
         self.left_motor_pin2.duty_u16(RobotCar.MAX_DUTY_CYCLE)
