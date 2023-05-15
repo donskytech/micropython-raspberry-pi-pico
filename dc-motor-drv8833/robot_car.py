@@ -51,11 +51,11 @@ class RobotCar:
         self.right_motor_pin2.duty_u16(RobotCar.MIN_DUTY_CYCLE)
         
     def stop(self):
-        self.left_motor_pin1.duty_u16(RobotCar.MAX_DUTY_CYCLE)
-        self.left_motor_pin2.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        self.left_motor_pin1.duty_u16(RobotCar.MIN_DUTY_CYCLE)
+        self.left_motor_pin2.duty_u16(RobotCar.MIN_DUTY_CYCLE)
         
-        self.right_motor_pin1.duty_u16(RobotCar.MAX_DUTY_CYCLE)
-        self.right_motor_pin2.duty_u16(RobotCar.MAX_DUTY_CYCLE)
+        self.right_motor_pin1.duty_u16(RobotCar.MIN_DUTY_CYCLE)
+        self.right_motor_pin2.duty_u16(RobotCar.MIN_DUTY_CYCLE)
         
     ''' Map duty cycle values from 0-100 to duty cycle 40000-65535 '''
     def __map_range(self, x, in_min, in_max, out_min, out_max):
